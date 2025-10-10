@@ -19,13 +19,14 @@ export default function Navbar() {
     <nav className="fixed top-0 z-50 w-full bg-white backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-2 py-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="#hero" className="flex items-center gap-3">
           <Image
             src="/logo-gdgoc-unm-b.png"
             alt="GDGoC UNM Logo"
             width={320}
             height={40}
             priority
+            className="cursor-pointer"
           />
         </Link>
 
