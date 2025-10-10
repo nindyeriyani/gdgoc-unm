@@ -5,7 +5,9 @@ import Link from "next/link";
 
 export default function GoogleEventSection() {
   return (
-    <section className="bg-white min-h-screen flex flex-col items-center justify-center pt-24 md:pt-20 pb-40 px-6 md:px-16 relative">
+    <section 
+    id="google-event"
+    className="bg-white min-h-screen flex flex-col items-center justify-center pt-24 md:pt-20 pb-40 px-6 md:px-16 relative">
       {/* Header */}
       <div className="max-w-5xl mx-auto mb-16 text-center">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">

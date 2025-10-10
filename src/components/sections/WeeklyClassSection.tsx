@@ -28,7 +28,10 @@ export default function WeeklyClassSection() {
   }, [isDragging, isHovered, controls]);
 
   return (
-    <section className="bg-[#EEF6FF] py-20 text-center overflow-hidden relative min-h-screen flex flex-col items-center justify-center">
+    <section
+      id="weekly-class"
+      className="bg-[#EEF6FF] py-20 text-center overflow-hidden relative min-h-screen flex flex-col items-center justify-center"
+    >
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
           Weekly Class

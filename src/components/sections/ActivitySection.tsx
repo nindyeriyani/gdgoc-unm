@@ -14,6 +14,7 @@ export default function ActivitySection() {
   return (
     <section
       ref={ref}
+      id="aktivitas"
       className="bg-white min-h-screen flex flex-col items-center justify-center py-20 px-6 md:px-16 text-center text-gray-800"
     >
       {/* Kontainer animasi untuk teks */}

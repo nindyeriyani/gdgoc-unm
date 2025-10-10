@@ -5,11 +5,11 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { name: "Tentang", path: "/tentang" },
-  { name: "Aktivitas Kami", path: "/aktivitas" },
-  { name: "Weekly Class", path: "/weekly-class" },
-  { name: "Google Event", path: "/google-event" },
-  { name: "Tim", path: "/tim" },
+  { name: "Tentang", path: "#tentang" },
+  { name: "Aktivitas Kami", path: "#aktivitas" },
+  { name: "Weekly Class", path: "#weekly-class" },
+  { name: "Google Event", path: "#google-event" },
+  { name: "Tim", path: "#tim" },
 ];
 
 export default function Navbar() {
@@ -34,17 +34,17 @@ export default function Navbar() {
           {navLinks.map((link) => {
             const isActive = pathname === link.path;
             return (
-              <Link
+              <a
                 key={link.name}
                 href={link.path}
-                className={`text-base transition-colors hover:text-[#404040] ${
-                  isActive
-                    ? "text-[#404040] font-semibold"
-                    : "text-[#404040] hover:font-semibold"
+                className={`text-base font-medium text-[#404040] transition-all duration-200 ${
+                  pathname === link.path
+                    ? "text-[#404040] [text-shadow:_0_0_0.6px_#404040]"
+                    : "text-[#808080] hover:text-[#404040] hover:[text-shadow:_0_0_0.6px_#404040]"
                 }`}
               >
                 {link.name}
-              </Link>
+              </a>
             );
           })}
 

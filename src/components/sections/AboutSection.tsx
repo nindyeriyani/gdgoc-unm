@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#EEF2F6] min-h-screen flex flex-col justify-center items-center px-6 md:px-16 text-center text-gray-800">
+    <section
+      id="tentang"
+      className="bg-[#EEF2F6] min-h-screen flex flex-col justify-center items-center px-6 md:px-16 text-center text-gray-800"
+    >
       {/* Top section: h2 and logo */}
       <div className="mb-12">
         <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-800">
