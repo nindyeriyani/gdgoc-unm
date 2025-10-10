@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/layout/Hero";
 import AboutSection from "@/components/sections/AboutSection";
 import ActivitySection from "@/components/sections/ActivitySection";
+import WeeklyClassSection from "@/components/sections/WeeklyClassSection"; 
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <ActivitySection />
+      <WeeklyClassSection />
     </main>
   );
 }
