@@ -17,7 +17,7 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-16 text-center flex flex-col justify-center items-center">
+    <section className="bg-white py-10 px-6 md:px-16 text-center flex flex-col justify-center items-center">
       {/* Header */}
       <div className="max-w-3xl mx-auto mb-10">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-2">
