@@ -50,7 +50,8 @@ export default function Navbar() {
 
           {/* Button */}
           <Link
-            href="/join"
+            href="https://gdg.community.dev/gdg-on-campus-universitas-negeri-makassar-makassar-indonesia/"
+            target="_blank"
             className="ml-4 bg-[#FF8D28] text-white px-5 py-3 rounded-lg font-bold text-base hover:bg-[#e97c20] transition-colors"
           >
             Daftar Member
