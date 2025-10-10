@@ -5,6 +5,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import ActivitySection from "@/components/sections/ActivitySection";
 import WeeklyClassSection from "@/components/sections/WeeklyClassSection";
 import GoogleEventSection from "@/components/sections/EventSection";
+import TestimonialsSection from "@/components/sections/TestimonialSection";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <ActivitySection />
       <WeeklyClassSection />
       <GoogleEventSection />
+      <TestimonialsSection />
     </main>
   );
 }
