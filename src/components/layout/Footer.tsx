@@ -15,10 +15,7 @@ export default function Footer() {
         <Link href="#weekly-class" className="hover:text-black transition">
           Weekly Class
         </Link>
-        <Link
-          href="#google-event"
-          className="hover:text-black transition"
-        >
+        <Link href="#google-event" className="hover:text-black transition">
           Google Event
         </Link>
         <Link href="#tim" className="hover:text-black transition">
@@ -29,7 +26,7 @@ export default function Footer() {
       {/* Social Icons */}
       <div className="flex justify-center gap-4 mb-6">
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/gdgoc.unm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#FF8D28] p-1 rounded-md text-white text-xl hover:scale-110 transition-transform"
@@ -37,7 +34,7 @@ export default function Footer() {
           <FaInstagram />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/gdscunm/"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#FF8D28] p-1 rounded-md text-white text-xl hover:scale-110 transition-transform"
@@ -45,7 +42,7 @@ export default function Footer() {
           <FaLinkedinIn />
         </a>
         <a
-          href="https://tiktok.com"
+          href="https://www.tiktok.com/@gdgoc.unm?_t=ZS-90RxROIdoTR&_r=1"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#FF8D28] p-1 rounded-md text-white text-xl hover:scale-110 transition-transform"

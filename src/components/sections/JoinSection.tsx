@@ -6,17 +6,19 @@ import Link from "next/link";
 export default function JoinSection() {
   return (
     <section className="bg-white w-full flex justify-center items-center py-10 px-6 relative overflow-visible">
-      <div className="bg-[#FF8D28] rounded-2xl flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-10 md:px-14 py-10 gap-10 relative overflow-visible">
+      <div className="bg-[#F58634] rounded-2xl flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-10 md:px-14 py-10 gap-10 relative overflow-visible">
         {/* Left: Image */}
         <div className="relative flex-shrink-0 flex justify-center items-end w-full md:w-1/3 h-full">
-          <Image
-            src="/images/join-avatar.png"
-            alt="Join GDGoC UNM"
-            width={300}
-            height={300}
-            className="object-contain absolute bottom-[-60px] md:bottom-[-167px]"
-            priority
-          />
+          <div className="relative w-[340px] h-auto md:w-[420px] lg:w-[460px]">
+            <Image
+              src="/images/join-avatar.png"
+              alt="Join GDGoC UNM"
+              width={460}
+              height={460}
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
 
         {/* Right: Text & Button */}

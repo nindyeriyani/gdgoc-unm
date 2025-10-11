@@ -55,7 +55,7 @@ export default function Hero() {
           onClick={() =>
             window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
           }
-          className="absolute top-124 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-transparent border-2 border-white/100 text-white px-6 py-3 rounded-full font-medium text-base hover:bg-white/20 transition-colors cursor-pointer"
+          className="absolute top-124 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium text-base hover:bg-white/20 transition-all duration-300 cursor-pointer animate-float"
         >
           Selengkapnya <ChevronDown size={18} />
         </button>

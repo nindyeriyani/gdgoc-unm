@@ -2,7 +2,7 @@ export const faqData = [
   {
     question: "Apa itu Google Developer Group on Campus UNM (GDGoC UNM)?",
     answer:
-      "GDGoC UNM adalah komunitas mahasiswa Universitas Negeri Makassar yang berfokus pada pengembangan teknologi, pembelajaran, dan kolaborasi di bawah inisiatif Google Developer Groups.",
+      "GDGOC UNM adalah komunitas mahasiswa yang berfokus pada pengembangan teknologi dan inovasi berbasis ekosistem Google. Kami menjadi wadah bagi mahasiswa Universitas Neger Makassar untuk belajar, berkolaborasi, dan membangun solusi nyata yang bermanfaat bagi kampus, bisnis lokal, dan masyarakat.",
   },
   {
     question: "Siapa saja yang bisa bergabung dengan GDGoC UNM?",
@@ -21,7 +21,11 @@ export const faqData = [
   },
   {
     question: "Apa saja manfaat yang bisa saya dapatkan dengan bergabung?",
-    answer:
-      "Kamu akan mendapatkan akses ke pelatihan teknologi, kesempatan kolaborasi proyek, pengembangan skill teknis dan soft skill, serta koneksi dengan komunitas developer global.",
+    answer: [
+      "Belajar langsung dari mentor dan developer.",
+      "Mengikuti event eksklusif seperti workshop, tech talk, dan study jam.",
+      "Membangun koneksi dengan komunitas teknologi di tingkat nasional maupun global.",
+      "Dan yang terpenting - mengembangkan kemampuan diri untuk siap bersaing di dunia industri teknologi.",
+    ],
   },
 ];
