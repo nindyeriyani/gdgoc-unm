@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
+      className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center text-center overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-[90vw] sm:max-w-3xl px-6 text-white flex flex-col items-center justify-center">
+      <div className="section-container relative text-white flex flex-col items-center justify-center">
         {/* Logo */}
         <div className="flex flex-col items-center mb-4">
           <Image
@@ -30,20 +30,20 @@ export default function Hero() {
             alt="GDGoC UNM Logo"
             width={480}
             height={70}
-            className="w-[60vw] max-w-[480px] h-auto"
+            className="w-[50vw] max-w-[420px] h-auto"
             priority
           />
         </div>
 
         {/* Tagline Box */}
-        <div className="bg-white/25 backdrop-blur-md border border-white/40 rounded-full px-6 sm:px-8 py-3 sm:py-4 mb-5 shadow-md">
-          <h1 className="text-xl sm:text-3xl md:text-4xl font-semibold text-white tracking-wide">
+        <div className="bg-white/25 backdrop-blur-md border border-white/40 rounded-full px-8 py-4 mb-5 shadow-md">
+          <h1 className="responsive-heading font-semibold text-white tracking-wide">
             Learn Together, Grow Together
           </h1>
         </div>
 
         {/* Subtitle */}
-        <p className="text-sm sm:text-lg text-gray-100 mb-12 max-w-2xl leading-relaxed">
+        <p className="responsive-text text-gray-100 mb-12 max-w-2xl leading-relaxed">
           Sebuah komunitas bagi para pembelajar, pengembang, dan inovator di
           Universitas Negeri Makassar.
         </p>

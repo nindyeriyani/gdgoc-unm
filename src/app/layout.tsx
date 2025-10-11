@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Roboto } from "next/font/google";
+import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 
-// Load fonts
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
 });
 
 const geistSans = Geist({
@@ -24,9 +21,7 @@ export const metadata: Metadata = {
   title: "GDGoC UNM",
   description:
     "Official website of the Google Developer Group at Universitas Negeri Makassar",
-  icons: {
-    icon: "/favicon.png",
-  },
+  icons: { icon: "/favicon.png" },
 };
 
 export default function RootLayout({
@@ -36,20 +31,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        {/* ✅ Viewport untuk skala responsif yang konsisten */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body
-        className={`
-          ${roboto.variable} 
-          antialiased
-          text-gray-900
-          bg-white
-          overflow-x-hidden
-        `}
-      >
-        <main className="w-full mx-auto">{children}</main>
+      <body className={`${roboto.variable} antialiased bg-white text-gray-900`}>
+        <main className="overflow-x-hidden">{children}</main>
       </body>
     </html>
   );
