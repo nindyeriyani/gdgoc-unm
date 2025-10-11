@@ -3,9 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 
+// Load fonts
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
 });
 
 const geistSans = Geist({
@@ -21,7 +23,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "GDGoC UNM",
   description:
-    "Official website of the Google Developer Group at University State Makassar",
+    "Official website of the Google Developer Group at Universitas Negeri Makassar",
   icons: {
     icon: "/favicon.png",
   },
@@ -29,12 +31,26 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} antialiased`}>{children}</body>
+      <head>
+        {/* ✅ Viewport untuk skala responsif yang konsisten */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body
+        className={`
+          ${roboto.variable} 
+          antialiased
+          text-gray-900
+          bg-white
+          overflow-x-hidden
+        `}
+      >
+        <main className="w-full mx-auto">{children}</main>
+      </body>
     </html>
   );
 }

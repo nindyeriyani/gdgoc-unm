@@ -3,35 +3,38 @@
 import Image from "next/image";
 import { weeklyClasses } from "@/data/weeklyClass";
 import { motion, useAnimation } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function WeeklyClassSection() {
   const controls = useAnimation();
-  const [isDragging, setIsDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const xPos = useRef(0);
+  const speed = 1.0; // kecepatan scroll (px per frame)
 
-  // Saat auto-scroll aktif, animasikan x dari 0 ke -50% secara berulang
+  // Animasi infinite scroll berbasis waktu nyata
   useEffect(() => {
-    if (!isDragging && !isHovered) {
-      controls.start({
-        x: ["0%", "-50%"],
-        transition: {
-          duration: 30,
-          ease: "linear",
-          repeat: Infinity,
-          repeatType: "loop",
-        },
-      });
-    } else {
-      controls.stop();
-    }
-  }, [isDragging, isHovered, controls]);
+    let frame: number;
+
+    const move = () => {
+      if (!isHovered && !isDragging) {
+        xPos.current -= speed;
+        controls.set({ x: xPos.current });
+      }
+      frame = requestAnimationFrame(move);
+    };
+
+    frame = requestAnimationFrame(move);
+    return () => cancelAnimationFrame(frame);
+  }, [isHovered, isDragging, controls]);
 
   return (
     <section
       id="weekly-class"
       className="bg-[#EEF6FF] py-20 text-center overflow-hidden relative min-h-screen flex flex-col items-center justify-center"
     >
+      {/* Header */}
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
           Weekly Class
@@ -45,7 +48,8 @@ export default function WeeklyClassSection() {
 
       {/* Container cards */}
       <div
-        className="relative w-full overflow-hidden min-h-80 py-10 cursor-grab"
+        ref={containerRef}
+        className="relative w-full overflow-hidden py-10 cursor-grab active:cursor-grabbing"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onMouseDown={() => setIsDragging(true)}
@@ -56,10 +60,17 @@ export default function WeeklyClassSection() {
         <motion.div
           className="flex gap-6"
           drag="x"
-          dragConstraints={{ left: -1000, right: 0 }}
+          dragConstraints={{ left: -Infinity, right: Infinity }}
           animate={controls}
         >
-          {[...weeklyClasses, ...weeklyClasses].map((item, index) => (
+          {/* Gandakan isi 5x agar tampak terus menerus */}
+          {[
+            ...weeklyClasses,
+            ...weeklyClasses,
+            ...weeklyClasses,
+            ...weeklyClasses,
+            ...weeklyClasses,
+          ].map((item, index) => (
             <div
               key={index}
               className="bg-white shadow-md rounded-2xl p-6 min-h-80 flex flex-col items-center justify-center w-[250px] flex-shrink-0"
