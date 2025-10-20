@@ -7,12 +7,12 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center text-center overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden pb-10"
     >
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/hero.JPG"
+          src="/images/hero-background.png"
           alt="GDGoC UNM Hero Background"
           fill
           className="object-cover object-center opacity-30"
@@ -22,34 +22,35 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="section-container relative text-white flex flex-col items-center justify-center">
-        {/* Logo */}
-        <div className="flex flex-col items-center mb-4">
-          <Image
-            src="/logo-gdgdoc-unm.png"
-            alt="GDGoC UNM Logo"
-            width={480}
-            height={70}
-            className="w-[50vw] max-w-[420px] h-auto"
-            priority
-          />
+      <div className="relative max-w-3xl px-6 text-white flex flex-col items-center justify-center">
+        {/* Logo + Title */}
+        <div className="flex flex-col items-center">
+          <div className="flex items-center gap-3 mb-3">
+            <Image
+              src="/logo-gdgdoc-unm.png"
+              alt="GDGoC UNM Logo"
+              width={540}
+              height={80}
+              priority
+            />
+          </div>
         </div>
 
         {/* Tagline Box */}
-        <div className="bg-white/25 backdrop-blur-md border border-white/40 rounded-full px-8 py-4 mb-5 shadow-md">
-          <h1 className="responsive-heading font-semibold text-white tracking-wide">
+        <div className="bg-white/25 backdrop-blur-md border border-white/50 rounded-full px-8 py-4 mb-4 shadow-md">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
             Learn Together, Grow Together
           </h1>
         </div>
 
         {/* Subtitle */}
-        <p className="responsive-text text-gray-100 mb-12 max-w-2xl leading-relaxed">
+        <p className="text-base sm:text-lg text-gray-100 mb-8 max-w-xl">
           Sebuah komunitas bagi para pembelajar, pengembang, dan inovator di
           Universitas Negeri Makassar.
         </p>
       </div>
 
-      {/* Scroll Button */}
+      {/* Button */}
       <button
         onClick={() =>
           window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
