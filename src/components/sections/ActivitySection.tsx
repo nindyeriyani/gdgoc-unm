@@ -30,7 +30,7 @@ export default function ActivitySection() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Aktivitas Kami
         </h2>
-        <p className="max-w-5xl mx-auto text-gray-500 mb-16 text-base md:text-lg leading-relaxed">
+        <p className="max-w-5xl mx-auto text-gray-500 mb-16 text-base md:text-lg lg:text-sm leading-relaxed">
           Kegiatan rutin yang mempertemukan tim inti, mahasiswa Google Developer
           Academy, dan masyarakat umum untuk belajar, berbagi, dan tumbuh
           bersama. Di sini, kita menjelajahi inovasi dan tren teknologi terbaru
@@ -51,7 +51,7 @@ export default function ActivitySection() {
               damping: 12,
               delay: i * 0.15, // animasi bertahap
             }}
-            className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-xs min-h-80 flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg"
+            className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-xs min-h-80 lg:min-h-40 flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg"
           >
             <div className="mb-6">
               <Image
@@ -59,12 +59,13 @@ export default function ActivitySection() {
                 alt={activity.title}
                 width={120}
                 height={120}
+                className="mx-auto lg:w-[60px] h-auto"
               />
             </div>
-            <h3 className="text-lg md:text-xl font-semibold mb-3 text-gray-800">
+            <h3 className="text-lg md:text-xl lg:text-base font-semibold mb-3 text-gray-800">
               {activity.title}
             </h3>
-            <p className="text-gray-500 text-sm md:text-base">
+            <p className="text-gray-500 text-sm md:text-base lg:text-sm leading-relaxed">
               {activity.description}
             </p>
           </motion.div>

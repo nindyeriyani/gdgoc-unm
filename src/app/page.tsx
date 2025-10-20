@@ -9,6 +9,7 @@ import TestimonialsSection from "@/components/sections/TestimonialSection";
 import JoinSection from "@/components/sections/JoinSection";
 import FaqSection from "@/components/sections/FaqSection";
 import Footer from "@/components/layout/Footer";
+import { MailsIcon } from "lucide-react";
 
 export default function Home() {
   return (

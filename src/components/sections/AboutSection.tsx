@@ -9,7 +9,7 @@ export default function AboutSection() {
       className="bg-[#EEF2F6] min-h-screen flex flex-col justify-center items-center px-6 md:px-16 text-center text-gray-800"
     >
       {/* Top section: h2 and logo */}
-      <div className="mb-12">
+      <div className="mb-12 lg:mb-8">
         <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-800">
           Tentang
         </h2>
@@ -19,16 +19,16 @@ export default function AboutSection() {
             alt="GDG On Campus Logo"
             width={400}
             height={60}
-            className="mx-auto"
+            className="mx-auto lg:w-[300px]"
           />
         </div>
       </div>
 
       {/* Middle section: paragraph centered */}
-      <div className="max-w-4xl mx-auto text-base md:text-xl leading-loose text-gray-700 mt-6">
+      <div className="max-w-4xl mx-auto text-base md:text-xl lg:text-sm leading-loose text-gray-700 mt-6 lg:mt-0">
         <p>
           <strong>
-            Google Developer Group On Campus (GDSC) Universitas Negeri Makassar
+            Google Developer Group On Campus (GDGoC) Universitas Negeri Makassar
           </strong>{" "}
           adalah komunitas mahasiswa yang berfokus pada pengembangan teknologi
           Google. Kami terbuka untuk <strong>seluruh mahasiswa</strong> dari
