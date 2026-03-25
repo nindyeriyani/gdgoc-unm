@@ -70,9 +70,9 @@ export default function TeamSection() {
       {/* Navigasi Kiri */}
       <button
         onClick={handlePrev}
-        className="cursor-pointer absolute left-2 lg:left-32 top-1/2 -translate-y-1/2 bg-transparent border-[2px] border-[#FF8D28] p-2 hover:p-3 rounded-full text-[#FF8D28] hover:bg-[#FF8D28] hover:text-white transition-all duration-300 z-10 flex items-center justify-center"
+        className="absolute left-2 lg:left-32 top-1/2 -translate-y-1/2 bg-transparent border-[2px] border-[#FF8D28] p-2 hover:p-3 rounded-full text-[#FF8D28] hover:bg-[#FF8D28] hover:text-white transition-all duration-300 z-10 flex items-center justify-center"
       >
-        <FaArrowLeft size={16} />
+        <FaArrowLeft size={16} className="cursor-pointer" />
       </button>
 
       {/* Cards Wrapper */}
@@ -220,9 +220,9 @@ export default function TeamSection() {
 
       <button
         onClick={handleNext}
-        className="cursor-pointer absolute right-2 lg:right-32 top-1/2 -translate-y-1/2 bg-transparent border-[2px] border-[#FF8D28] p-2 hover:p-3 rounded-full text-[#FF8D28] hover:bg-[#FF8D28] hover:text-white transition-all duration-300 z-10 flex items-center justify-center"
+        className="absolute right-2 lg:right-32 top-1/2 -translate-y-1/2 bg-transparent border-[2px] border-[#FF8D28] p-2 hover:p-3 rounded-full text-[#FF8D28] hover:bg-[#FF8D28] hover:text-white transition-all duration-300 z-10 flex items-center justify-center"
       >
-        <FaArrowRight size={16} />
+        <FaArrowRight size={16} className="cursor-pointer" />
       </button>
     </section>
   );
