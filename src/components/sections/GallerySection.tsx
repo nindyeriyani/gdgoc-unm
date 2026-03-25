@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const allImages = [
   { src: "/images/hero.JPG", alt: "Kolaborasi Tim" },
