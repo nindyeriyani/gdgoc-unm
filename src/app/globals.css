@@ -50,6 +50,81 @@ body {
   animation: float 2s ease-in-out infinite;
 }
 
+/* === ACCORDION ANIMATIONS === */
+@keyframes slideDown {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.animate-slideUp {
+  animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+/* === FAQ CONTENT ANIMATIONS === */
+.faq-answer-card {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+[data-state=open] > div > .faq-answer-card {
+  animation: answer-drop-in 500ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+[data-state=closed] > div > .faq-answer-card {
+  animation: answer-exit 300ms ease-in forwards;
+}
+
+@keyframes answer-drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes answer-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slideUp {
+  animation: slideUp 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* === RESPONSIVE SCALING SYSTEM === */
 
 /* Kontainer universal */

@@ -25,7 +25,6 @@ export const faqData = [
       "Belajar langsung dari mentor dan developer.",
       "Mengikuti event eksklusif seperti workshop, tech talk, dan study jam.",
       "Membangun koneksi dengan komunitas teknologi di tingkat nasional maupun global.",
-      "Dan yang terpenting - mengembangkan kemampuan diri untuk siap bersaing di dunia industri teknologi.",
     ],
   },
 ];

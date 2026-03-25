@@ -30,8 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${roboto.variable} antialiased bg-white text-gray-900`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${roboto.className} antialiased bg-white text-gray-900`}
+      >
         <main className="overflow-x-hidden">{children}</main>
       </body>
     </html>

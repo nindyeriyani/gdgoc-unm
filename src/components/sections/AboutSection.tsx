@@ -6,11 +6,11 @@ export default function AboutSection() {
   return (
     <section
       id="tentang"
-      className="bg-[#EEF2F6] min-h-[100dvh] flex flex-col justify-center items-center text-center text-gray-800"
+      className="bg-[#F0F5FA] min-h-screen flex flex-col justify-center items-center text-center text-gray-800 pt-32 pb-20 px-6 scroll-mt-5"
     >
       {/* Top section: h2 and logo */}
-      <div className="mb-12">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-800">
+      <div className="w-full max-w-6xl mx-auto text-center mb-8">
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 md:mb-10">
           Tentang
         </h2>
         <div className="flex items-center justify-center gap-3">
@@ -25,7 +25,7 @@ export default function AboutSection() {
       </div>
 
       {/* Middle section: paragraph centered */}
-      <div className="max-w-4xl mx-auto text-base md:text-xl leading-loose text-gray-700 mt-6">
+      <div className="max-w-4xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 mt-6">
         <p>
           <strong>
             Google Developer Group On Campus (GDSC) Universitas Negeri Makassar

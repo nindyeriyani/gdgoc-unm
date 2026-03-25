@@ -9,10 +9,10 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Nurhidayat",
+    name: "Citra Nuraiyani",
     role: "Mahasiswa JTIK",
     message:
-      "Menjadi bagian dari GDGoC Universitas Negeri Makassar adalah pengalaman yang sangat berharga bagi saya. Setiap pertemuan dan workshop memberikan wawasan baru tentang dunia teknologi. Saya juga belajar bagaimana bekerja secara kolaboratif dalam tim lintas jurusan. Lingkungannya positif dan penuh semangat belajar. Ini benar-benar komunitas yang membantu saya tumbuh secara profesional dan pribadi.",
+      "Menjadi bagian dari GDGoC Universitas Negeri Makassar adalah perjalanan luar biasa penuh pembelajaran dan pengembangan diri. Melalui setiap sesi dan proyek kolaboratif, saya tidak hanya memperoleh keterampilan teknis, tetapi juga kepercayaan diri untuk berbagi ide dan bekerja dengan orang dari berbagai latar belakang.",
     avatar: "/icons/user.png",
   },
   {

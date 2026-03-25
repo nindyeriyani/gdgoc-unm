@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function TestimonialSection() {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0); // untuk arah animasi
+  const [direction, setDirection] = useState(0);
 
   const handlePrev = () => {
     setDirection(-1);
@@ -21,65 +21,80 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="bg-white py-20 px-6 md:px-16 flex flex-col justify-center items-center relative overflow-hidden">
-      {/* Header */}
-      <div className="max-w-3xl mx-auto mb-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
-          Cerita Para Member GDGoC UNM
-        </h2>
-      </div>
-
-      {/* Wrapper agar navigasi tidak bergeser */}
-      <div className="relative w-full max-w-5xl flex flex-col items-center">
-        {/* Testimonial Card dengan animasi */}
-        <div className="relative w-full h-auto min-h-[380px]">
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={current}
-              custom={direction}
-              initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="absolute top-0 left-0 w-full bg-white shadow-md rounded-2xl p-10 mx-auto flex flex-col items-start text-left border border-gray-100"
-            >
-              <FaQuoteLeft className="text-xl text-gray-400 mb-6" />
-              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                {testimonials[current].message}
-              </p>
-
-              <div className="flex items-center gap-4 mt-auto">
-                <div className="w-14 h-14 relative rounded-full border flex items-center justify-center">
-                  <Image
-                    src={testimonials[current].avatar}
-                    alt={testimonials[current].name}
-                    fill
-                    className="rounded-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900">
-                    {testimonials[current].name}
-                  </h4>
-                  <p className="text-sm text-gray-500">
-                    {testimonials[current].role}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+    <section
+      id="testimoni"
+      className="bg-white flex flex-col justify-center items-center py-24 px-6 md:px-16 scroll-mt-5"
+    >
+      <div className="max-w-6xl mx-auto w-full flex flex-col items-center">
+        {/* Header */}
+        <div className="w-full max-w-6xl mx-auto text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+            Cerita Para Member
+          </h2>
         </div>
 
-        {/* Navigation */}
-        <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center justify-center gap-6">
+        {/* Testimonial Card */}
+        <div className="relative w-full max-w-5xl mb-8">
+          <div className="relative min-h-[300px] md:min-h-[200px] w-full">
+            <AnimatePresence mode="wait" custom={direction}>
+              <motion.div
+                key={current}
+                custom={direction}
+                initial={{ opacity: 0, x: direction > 0 ? 20 : -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: direction > 0 ? -20 : 20 }}
+                transition={{
+                  duration: 0.6,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="relative absolute inset-0 bg-white rounded-[1.5rem] p-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col items-start"
+              >
+                {/* Quote kecil kiri atas */}
+                <FaQuoteLeft className="absolute top-4 left-6 md:left-10 text-xl text-[#4A4A4A] opacity-60" />
+
+                {/* Text */}
+                <p className="text-[#4A4A4A] text-[16px] leading-relaxed font-medium mb-6 max-w-4xl mt-4">
+                  {testimonials[current].message}
+                </p>
+
+                {/* Author Info */}
+                <div className="mt-auto flex items-center gap-3">
+                  <div className="w-12 h-12 relative flex items-center justify-center">
+                    <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
+                      <Image
+                        src={testimonials[current].avatar}
+                        alt={testimonials[current].name}
+                        width={48}
+                        height={48}
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="text-lg font-bold text-[#4A4A4A] leading-tight">
+                      {testimonials[current].name}
+                    </h4>
+                    <p className="text-[#848484] font-medium text-xs mt-0.5">
+                      {testimonials[current].role}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+
+        {/* Navigation Contols */}
+        <div className="flex items-center gap-8 md:gap-12 mt-4">
           <button
             onClick={handlePrev}
-            className="text-gray-600 font-medium px-4 py-2 rounded hover:bg-gray-100 transition cursor-pointer"
+            className="text-[#4A4A4A] font-semibold text-lg hover:text-[#FF8D28] transition-colors cursor-pointer"
           >
             Kembali
           </button>
 
-          <div className="flex gap-3">
+          {/* Dots */}
+          <div className="flex items-center gap-4">
             {testimonials.map((_, idx) => (
               <button
                 key={idx}
@@ -87,19 +102,32 @@ export default function TestimonialSection() {
                   setDirection(idx > current ? 1 : -1);
                   setCurrent(idx);
                 }}
-                className={`w-5 h-5 rounded-full border-2 cursor-pointer ${
-                  current === idx
-                    ? "border-[#F58634] bg-[#F58634]"
-                    : "border-[#F58634] bg-transparent"
-                } transition`}
+                className="relative flex items-center justify-center w-6 h-6 cursor-pointer"
                 aria-label={`Go to testimonial ${idx + 1}`}
-              />
+              >
+                {/* Outer Ring */}
+                <span
+                  className={`absolute inset-0 rounded-full border-2 transition-all duration-300 ${
+                    current === idx
+                      ? "border-[#FF8D28] scale-100"
+                      : "border-[#FF8D28]/30 scale-75"
+                  }`}
+                />
+                {/* Inner Dot */}
+                <span
+                  className={`w-2.5 h-2.5 rounded-full bg-[#FF8D28] transition-all duration-300 ${
+                    current === idx
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-50"
+                  }`}
+                />
+              </button>
             ))}
           </div>
 
           <button
             onClick={handleNext}
-            className="text-gray-600 font-medium px-4 py-2 rounded hover:bg-gray-100 transition cursor-pointer"
+            className="text-[#4A4A4A] font-semibold text-lg hover:text-[#FF8D28] transition-colors cursor-pointer"
           >
             Berikutnya
           </button>

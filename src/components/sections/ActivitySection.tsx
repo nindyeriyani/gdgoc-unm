@@ -15,7 +15,7 @@ export default function ActivitySection() {
     <section
       ref={ref}
       id="aktivitas"
-      className="bg-white min-h-[100dvh] flex flex-col items-center justify-center py-20 text-gray-800"
+      className="bg-white min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6 text-gray-800 scroll-mt-5"
     >
       {/* Kontainer animasi untuk teks */}
       <motion.div
@@ -27,10 +27,10 @@ export default function ActivitySection() {
           damping: 12,
         }}
       >
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6 text-center">
           Aktivitas Kami
         </h2>
-        <p className="max-w-5xl mx-auto text-gray-500 mb-16 text-base md:text-lg leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed text-center mb-12 md:mb-16">
           Kegiatan rutin yang mempertemukan tim inti, mahasiswa Google Developer
           Academy, dan masyarakat umum untuk belajar, berbagi, dan tumbuh
           bersama. Di sini, kita menjelajahi inovasi dan tren teknologi terbaru
@@ -39,7 +39,7 @@ export default function ActivitySection() {
       </motion.div>
 
       {/* Grid animasi kartu */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl">
         {activities.map((activity, i) => (
           <motion.div
             key={activity.id}
@@ -51,9 +51,9 @@ export default function ActivitySection() {
               damping: 12,
               delay: i * 0.15, // animasi bertahap
             }}
-            className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-xs min-h-80 flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg"
+            className="bg-white border border-gray-100 shadow-sm rounded-2xl p-6 md:p-8 w-full min-h-[300px] flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
-            <div className="mb-6">
+            <div className="mb-6 flex-shrink-0">
               <Image
                 src={activity.image}
                 alt={activity.title}
@@ -61,10 +61,10 @@ export default function ActivitySection() {
                 height={120}
               />
             </div>
-            <h3 className="text-lg md:text-xl font-semibold mb-3 text-gray-800">
+            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
               {activity.title}
             </h3>
-            <p className="text-gray-500 text-sm md:text-base">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
               {activity.description}
             </p>
           </motion.div>

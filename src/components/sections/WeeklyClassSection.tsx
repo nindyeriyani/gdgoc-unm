@@ -30,14 +30,13 @@ export default function WeeklyClassSection() {
   return (
     <section
       id="weekly-class"
-      className="bg-[#EEF6FF] py-20 text-center overflow-hidden relative min-h-[100dvh] flex flex-col items-center justify-center"
+      className="bg-[#F4F7FC] flex flex-col items-center justify-center pt-32 pb-20 text-center overflow-hidden relative min-h-screen scroll-mt-5"
     >
-      {/* Header */}
-      <div className="section-container max-w-5xl mx-auto px-6 sm:px-10 md:px-16">
-        <h2 className="responsive-heading font-semibold text-gray-800 mb-4">
+      <div className="w-full max-w-6xl mx-auto text-center mb-12 md:mb-16 px-6">
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
           Weekly Class
         </h2>
-        <p className="responsive-text text-gray-500 max-w-3xl mx-auto mb-12 sm:mb-16 leading-relaxed sm:leading-loose">
+        <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Belajar, berbagi, dan tumbuh bersama di Weekly Class, tempat para
           pengembang dan pecinta teknologi terus melangkah maju di era digital
           yang dinamis.
@@ -67,7 +66,7 @@ export default function WeeklyClassSection() {
             .map((item, index) => (
               <div
                 key={index}
-                className="bg-white shadow-md rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-center min-h-[19rem] sm:min-h-[21rem] w-[200px] sm:w-[230px] md:w-[260px] flex-shrink-0 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                className="bg-white border border-gray-100 shadow-sm rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-center min-h-[19rem] sm:min-h-[21rem] w-[200px] sm:w-[230px] md:w-[260px] flex-shrink-0 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
               >
                 <div className="w-20 sm:w-24 h-20 sm:h-24 mb-4 flex items-center justify-center">
                   <Image
@@ -78,10 +77,10 @@ export default function WeeklyClassSection() {
                     className="object-contain w-[60px] sm:w-[80px] md:w-[96px] h-auto"
                   />
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed px-2">
+                <p className="text-sm text-gray-600 leading-relaxed px-2">
                   {item.description}
                 </p>
               </div>

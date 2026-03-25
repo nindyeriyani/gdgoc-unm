@@ -5,11 +5,12 @@ import AboutSection from "@/components/sections/AboutSection";
 import ActivitySection from "@/components/sections/ActivitySection";
 import WeeklyClassSection from "@/components/sections/WeeklyClassSection";
 import GoogleEventSection from "@/components/sections/EventSection";
+import TeamSection from "@/components/sections/TeamSection";
+import GallerySection from "@/components/sections/GallerySection";
 import TestimonialsSection from "@/components/sections/TestimonialSection";
 import JoinSection from "@/components/sections/JoinSection";
 import FaqSection from "@/components/sections/FaqSection";
 import Footer from "@/components/layout/Footer";
-import { MailsIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
       <ActivitySection />
       <WeeklyClassSection />
       <GoogleEventSection />
+      <TeamSection />
+      <GallerySection />
       <TestimonialsSection />
       <JoinSection />
       <FaqSection />
